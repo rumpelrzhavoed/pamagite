@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+  }
+
+@font-face {
+    font-family: Age-Normal_f;
+    src: url(../html/fonts/Age-Normal.ttf);
+}
+@font-face {
+    font-family: FairwallSans-Regular_f;
+    src: url(../html/fonts/FairwallSans-Regular.otf);
+    font-weight: normal;
+}
+@font-face {
+    font-family: Shentox-Regular_f;
+    src: url(../html/fonts/Shentox-Regular.ttf);
+    font-weight: 900;
+}
+@font-face {
+    font-family: Sensal-Regular_f;
+    src: url(../html/fonts/Sensal-Regular.ttf);
+}
+
+
+:root{
+    --index: calc(1vw + 1vh);
+    --gutter: 30px;
+    --side_small:26;
+    --side_big: 36;
+    --depth: 4840px;
+    --transition: .75s cubic-bezier(.075, .5, 0, 1)
+}
+
+/* ДЛЯ ЖПЛЛ 5640 ДЛЯ ММ 5430 */
+
+
+body{
+    background-color: #151515;
+    color: rgb(255, 255, 255);
+    font-size: calc(var(--index) * .8);
+    font-family: FairwallSans-Regular_f, sans-serif;
+    line-height: 1.75;
+    height: var(--depth);
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    perspective: 1500px;
+    will-change: transform;
+}
+
+.gallery{
+    transform-style: preserve-3d;
+    height: 100%;
+}
+
+.frame{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition), opacity .75s ease;
+    will-change: transform;
+    transform-style: preserve-3d;
+}
+
+h1, h2, h3, h4{
+    text-transform: uppercase;
+}
+
+.frame h2{
+    text-align: center;
+    font-size: calc(var(--index)* 3);
+    font-family: Age-Normal_f, sans-serif;
+    letter-spacing: 2.5px;
+    width: min-content;
+}
+
+.frame h4{
+    text-align: left;
+    font-size: calc(var(--index) /.9);
+    font-family: Age-Normal_f, sans-serif;
+    letter-spacing: 2.5px;
+
+}
+
+
+
+.frame_media{
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.frame-media_middle{
+
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    margin-top: 40vh;
+    width: 2vw;
+    height: 4vh;
+
+}
+
+.frame-media_left{
+    right: calc(var(--side_big) / 2 * var(--index) + var(--gutter));
+    width: calc(var(--index) * var(--side_big));
+    height: calc(var(--index) * var(--side_small));
+}
+
+.frame-media_right{
+    left: calc(var(--side_big) / 2 * var(--index) + var(--gutter));
+    width: calc(var(--index) * var(--side_small));
+    height: calc(var(--index) * var(--side_big));
+}
+
+.frame-media_left_vert{
+    right: calc(var(--side_big) / 2 * var(--index) + var(--gutter));
+    width: calc(var(--index) * var(--side_small));
+    height: calc(var(--index) * var(--side_big));
+}
+
+
+.frame-media_leftHa{
+    right: calc(var(--side_big) / 2 * var(--index) + var(--gutter));
+    width: calc(var(--index) * var(--side_big));
+    height: calc(var(--index) * var(--side_small));
+}
+
+.frame_bg{
+background-color: rgb(21 21 21 /.88);
+
+}
+
+.text-right > * {
+ position: relative;
+  left: 18vw;
+}
+
+.frame h3 {
+    font-family: Age-Normal_f, sans-serif;
+    letter-spacing: 2.5px;
+    font-size: calc(var(--index) * 2);
+}
+
+.frame p{
+    max-width: 30vw;
+}
+
+.text-left > * {
+    position: relative;
+     right: 20vw;
+   }
+
+   .frame_bg1{
+    background-color: rgb(21 21 21 /.99);
+   }
+
+   .frame_bg2{
+    background-color: rgb(21 21 21 /.98);
+   }
+
+
+.link{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+   .btn{
+    color: #fff;
+    background-color: #0066cc00;
+    padding: 10px 30px;
+    border: solid #ffffff 2px;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+    border-radius: 50px;
+    transition : 1000ms;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    }
+    
+    .btn:hover{
+    transition : 1000ms;
+    padding: 10px 50px;
+    transform : translateY(-0px);
+    background-color: #fff;
+    color: #ffffff;
+    border: solid 2px #ffffff;
+    }
+

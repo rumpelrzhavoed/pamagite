@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #E8E8E8;
+}
+
+@font-face {
+    font-family: Age-Normal_f;
+    src: url(../html/fonts/Age-Normal.ttf);
+}
+@font-face {
+    font-family: FairwallSans-Regular_f;
+    src: url(../html/fonts/FairwallSans-Regular.otf);
+    font-weight: normal;
+}
+
+:root{
+    --index: calc(1vw + 1vh);
+}
+
+.main_craft{
+    display: flex;
+     align-items: center;
+    justify-content: center;
+}
+
+.picture{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    background-size: cover;
+    z-index: 2;
+ }
+
+ .block{
+    font-family: FairwallSans-Regular_f, sans-serif;
+    line-height: 1.30;  
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.info_block1{
+    margin-top: calc(var(--index)*4);
+    margin-left: calc(var(--index)*3.4);
+    margin-right: calc(var(--index)*2.8);
+    display: grid;
+    grid-template-columns: 0.9fr 1fr 2.49fr 2fr;
+    grid-auto-rows: minmax(100px, auto);
+    font-size: calc(var(--index)/1.2);
+}
+
+
+.head_text3{
+    font-size: calc(var(--index)/1.2);
+    text-align: left;
+    padding-left:calc(var(--index)*1.5);
+    font-family: Age-Normal_f, sans-serif;
+}
+
+.info_block2{
+    margin-left: calc(var(--index)*3.4);
+    margin-right: calc(var(--index)*2.8);
+    margin-top: calc(var(--index)*.2);
+    display: grid;
+    grid-template-columns: 3.5fr .7fr .7fr;
+    gap: 1em 0em;
+    font-size: calc(var(--index)/1.2);
+}
+
+.info_block3{
+ 
+    margin-left: calc(var(--index)*3.4);
+    margin-right: calc(var(--index)*2.8);
+    margin-top: calc(var(--index)*6.5);
+    display: grid;
+    grid-template-columns: 1.3fr 4fr;
+    gap: 1em 0em;
+    font-size: calc(var(--index)/1.2);
+    
+}
+
+
+
+
+
+
